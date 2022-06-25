@@ -1,14 +1,12 @@
-const Movie = (movie) => {
-    // console.log(movie.popularity)
+import './DiscoverMovie.css';
 
+const Movie = (movie) => {
     return(
-        <li>
-            <div>
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
-                <h3>{movie.title}</h3>
-                <p>{movie.overview}</p>
-            </div>
-        </li>
+        <div className='movieCard'>
+            <img className="movieImg" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+            <h4>{movie.title}</h4>
+            <button className='button'><a href='../MovieDetail/MovieDetail.js' className='link' >Ver más</a></button>
+        </div>
     )
 }
 
